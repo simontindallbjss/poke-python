@@ -1,0 +1,21 @@
+[project]
+name = "poke-python"
+version = "0.1.0"
+description = "Pokemon RPG for learning Python and other tools/languages"
+authors = [
+    {name = "Simon Tindall",email = "simon.tindall@bjss.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic (>=2.12.5,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.packages]]
+include = "poke_python"
+from = "src"
