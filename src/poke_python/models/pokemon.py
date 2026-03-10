@@ -1,6 +1,6 @@
-from pydantic import Basemodel
+from pydantic import BaseModel
 
-class Pokemon(Basemodel):
+class Pokemon(BaseModel):
     id: int
     name: str
     height: int
