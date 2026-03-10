@@ -1,4 +1,5 @@
 import requests
+from src.poke_python.models.pokemon import Pokemon
 
 class PokeApiError(Exception):
     """Base exception for PokeAPI errors."""
@@ -13,7 +14,7 @@ class PokeApiClient:
         self.session = requests.Session()
         self.timeout = timeout
 
-    def get_pokemon(self, identifier: int | str) -> dict:
+    def get_pokemon(self, identifier: int | str) -> Pokemon:
         """
         Method to query the pokeapi to return a pokemon object given either an id or a name
         """
@@ -29,6 +30,8 @@ class PokeApiClient:
                 f"(status {response.status_code})"
             ) from exc
 
-        return response.json()
+        data = response.json()
+
+        return Pokemon.from_json(data)
 
         
