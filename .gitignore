@@ -1,2 +1,8 @@
+# Bytecode
+*.py[cod]
+
+# Cache directories
+__pycache__/
+
 .vscode
 .venv
