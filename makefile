@@ -1,4 +1,4 @@
-.PHONY: install test lint format
+.PHONY: install test lint format hooks coverage
 
 install:
 	poetry install
@@ -6,7 +6,7 @@ install:
 test:
 	poetry run pytest
 
-make lint:
+lint:
 	poetry run ruff check .
 
 format:
@@ -14,3 +14,10 @@ format:
 
 hooks:
 	poetry run pre-commit run --all-files
+
+coverage:
+	poetry run pytest --cov=poke_python --cov-report=term-missing
+
+coverage-html:
+	poetry run pytest --cov=poke_python --cov-report=html
+	open htmlcov/index.html

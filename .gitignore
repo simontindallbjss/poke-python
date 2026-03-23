@@ -6,3 +6,7 @@ __pycache__/
 
 .vscode
 .venv
+
+# Test coverage
+.coverage
+htmlcov/
