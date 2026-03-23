@@ -16,8 +16,8 @@ hooks:
 	poetry run pre-commit run --all-files
 
 coverage:
-	poetry run pytest --cov=poke_python --cov-report=term-missing
+	poetry run pytest --cov --cov-report=term-missing
 
 coverage-html:
-	poetry run pytest --cov=poke_python --cov-report=html
+	poetry run pytest --cov --cov-report=html
 	open htmlcov/index.html

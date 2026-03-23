@@ -1,6 +1,10 @@
 [run]
+source =
+    src/poke_python
 omit =
     src/poke_python/enums.py
+    */__init__.py
+    */tests/*
 
 [report]
 fail_under = 80
