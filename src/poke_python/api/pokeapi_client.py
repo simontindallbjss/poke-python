@@ -19,6 +19,7 @@ reuse, and extend.
 
 import requests
 
+
 class PokeApiError(Exception):
     """Base exception for PokeAPI errors."""
 
@@ -60,12 +61,12 @@ class PokeApiClient:
         Raises:
             PokeApiError: If the request fails
         """
-        
+
         url = f"{self.BASE_URL}/pokemon/{identifier}"
 
         response = self.session.get(url, timeout=self.timeout)
 
-        try: 
+        try:
             response.raise_for_status()
         except requests.exceptions.HTTPError as exc:
             raise PokeApiError(
@@ -74,5 +75,3 @@ class PokeApiClient:
             ) from exc
 
         return response.json()
-
-        

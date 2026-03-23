@@ -1,0 +1,6 @@
+[run]
+omit =
+    src/poke_python/enums.py
+
+[report]
+fail_under = 80

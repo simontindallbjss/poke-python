@@ -1,8 +1,8 @@
 import pytest
-from src.poke_python.api.pokeapi_client import PokeApiClient, PokeApiError
+from poke_python.api.pokeapi_client import PokeApiClient, PokeApiError
+
 
 def test_get_pokemon():
-
     api_client = PokeApiClient()
 
     pokemon_from_id = api_client.get_pokemon(25)
