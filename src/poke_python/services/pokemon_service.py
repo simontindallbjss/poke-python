@@ -1,5 +1,10 @@
 from poke_python.api.pokeapi_client import PokeApiClient
-from poke_python.models.pokemon import Pokemon, PokemonTypeInfo, PokemonStatInfo
+from poke_python.models.pokemon import (
+    Pokemon,
+    PokemonTypeInfo,
+    PokemonStatInfo,
+    Sprites,
+)
 from poke_python.enums import PokemonType, StatName
 
 
@@ -37,4 +42,8 @@ class PokemonService:
             exp=data["base_experience"],
             types=pokemon_type_list,
             stats=pokemon_stat_list,
+            sprites=Sprites(
+                front_default=data["sprites"]["front_default"],
+                back_default=data["sprites"]["back_default"],
+            ),
         )

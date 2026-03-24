@@ -15,6 +15,11 @@ class PokemonStatInfo(BaseModel):
     url: str
 
 
+class Sprites(BaseModel):
+    front_default: str
+    back_default: str
+
+
 class Pokemon(BaseModel):
     id: int
     name: str
@@ -23,3 +28,4 @@ class Pokemon(BaseModel):
     exp: int
     types: list[PokemonTypeInfo]
     stats: list[PokemonStatInfo]
+    sprites: Sprites

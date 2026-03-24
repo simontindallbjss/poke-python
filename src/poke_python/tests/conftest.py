@@ -1,5 +1,10 @@
 import pytest
-from poke_python.models.pokemon import Pokemon, PokemonTypeInfo, PokemonStatInfo
+from poke_python.models.pokemon import (
+    Pokemon,
+    PokemonTypeInfo,
+    PokemonStatInfo,
+    Sprites,
+)
 from poke_python.enums import PokemonType, StatName
 
 
@@ -56,6 +61,10 @@ def pikachu():
                 url="https://pokeapi.co/api/v2/stat/6/",
             ),
         ],
+        sprites=Sprites(
+            front_default="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+            back_default="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png",
+        ),
     )
 
 
@@ -113,4 +122,8 @@ def zubat():
                 url="https://pokeapi.co/api/v2/stat/6/",
             ),
         ],
+        sprites=Sprites(
+            front_default="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+            back_default="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/41.png",
+        ),
     )
