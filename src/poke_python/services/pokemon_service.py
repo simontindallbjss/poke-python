@@ -34,6 +34,7 @@ class PokemonService:
             name=data["name"],
             height=data["height"],
             weight=data["weight"],
+            exp=data["base_experience"],
             types=pokemon_type_list,
             stats=pokemon_stat_list,
         )

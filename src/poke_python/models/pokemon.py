@@ -20,5 +20,6 @@ class Pokemon(BaseModel):
     name: str
     height: int
     weight: int
+    exp: int
     types: list[PokemonTypeInfo]
     stats: list[PokemonStatInfo]
