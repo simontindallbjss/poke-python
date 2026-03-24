@@ -8,3 +8,10 @@ def test_get_pokemon():
 
     assert test_pokemon.id == 25
     assert test_pokemon.name == "pikachu"
+    assert len(test_pokemon.types) == 1
+
+    test_pokemon = service.get_pokemon("zubat")
+
+    assert test_pokemon.id == 41
+    assert test_pokemon.name == "zubat"
+    assert len(test_pokemon.types) == 2
